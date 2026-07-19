@@ -1,0 +1,117 @@
+.hero {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 64px 20px 48px;
+}
+
+.hero__terminal {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -30px rgba(0,0,0,0.6), 0 0 0 1px rgba(110,231,249,0.03);
+}
+
+.hero__bar {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 14px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.hero__bar-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0.85;
+}
+
+.hero__bar-title {
+  margin-left: 10px;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.hero__body {
+  padding: 22px 20px 26px;
+  min-height: 190px;
+}
+
+.hero__block { margin-bottom: 14px; }
+.hero__block:last-child { margin-bottom: 0; }
+
+.hero__prompt {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: var(--text-primary);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.hero__prompt--idle { margin: 0; }
+
+.hero__user { color: var(--accent); }
+.hero__sep { color: var(--text-dim); margin: 0 2px; }
+
+.hero__out {
+  margin: 0;
+  padding-left: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.hero__cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background: var(--accent);
+  margin-left: 4px;
+  vertical-align: -3px;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.hero__tagline {
+  margin: 28px 0 0;
+  font-size: 17px;
+  color: var(--text-secondary);
+  max-width: 46ch;
+}
+
+.hero__cta {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+
+.hero__btn {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.hero__btn:hover { border-color: var(--accent-dim); background: var(--surface); }
+
+.hero__btn--primary {
+  background: var(--accent);
+  color: #04141a;
+  border-color: var(--accent);
+  font-weight: 600;
+}
+.hero__btn--primary:hover { background: #86eefc; border-color: #86eefc; }
+
+@media (max-width: 560px) {
+  .hero { padding: 40px 16px 32px; }
+  .hero__body { padding: 18px 14px 22px; min-height: 170px; }
+}

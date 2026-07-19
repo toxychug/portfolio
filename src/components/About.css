@@ -1,0 +1,33 @@
+.about {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 56px 20px;
+  border-top: 1px solid var(--border-soft);
+}
+
+.about__label {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin: 0 0 18px;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.about__idx { color: var(--accent-dim); }
+
+.about__file {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-bottom: 14px;
+}
+
+.about__bio {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  max-width: 62ch;
+  margin: 0;
+}

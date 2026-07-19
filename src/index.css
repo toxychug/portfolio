@@ -1,0 +1,64 @@
+/* ============================================================
+   DESIGN TOKENS — "systems console" theme
+   ============================================================ */
+:root {
+  /* color */
+  --bg: #0a0e17;
+  --bg-raised: #10151f;
+  --surface: #131a26;
+  --surface-hover: #182131;
+  --border: #232c3d;
+  --border-soft: #1a2231;
+
+  --text-primary: #e8ecf4;
+  --text-secondary: #8792a8;
+  --text-dim: #4d5567;
+
+  --accent: #6ee7f9;       /* cyan — primary status/online */
+  --accent-dim: #3a8a99;
+  --accent-amber: #f5a623; /* warnings / highlight */
+  --accent-red: #f4685a;   /* errors / offline */
+  --accent-green: #6ee7a3; /* success ticks, distinct hue from accent */
+
+  /* type */
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* layout */
+  --maxw: 920px;
+  --radius: 3px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(110,231,249,0.06), transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(245,166,35,0.04), transparent 40%);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--accent); color: #04121a; }
+
+a { color: inherit; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+button { font-family: inherit; }
+
+code, .mono { font-family: var(--font-mono); }
